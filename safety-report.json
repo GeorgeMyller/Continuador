@@ -1,0 +1,481 @@
+
+
++===========================================================================================================================================================================================+
+
+
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++===========================================================================================================================================================================================+
+
+
+{
+    "report_meta": {
+        "scan_target": "files",
+        "scanned": [
+            "requirements.txt"
+        ],
+        "scanned_full_path": [
+            "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+        ],
+        "target_languages": [
+            "python"
+        ],
+        "policy_file": null,
+        "policy_file_source": "local",
+        "audit_and_monitor": false,
+        "api_key": false,
+        "account": "",
+        "local_database_path": null,
+        "safety_version": "3.6.0",
+        "timestamp": "2025-08-17 11:08:01",
+        "packages_found": 7,
+        "vulnerabilities_found": 0,
+        "vulnerabilities_ignored": 2,
+        "remediations_recommended": 0,
+        "telemetry": {
+            "safety_options": {
+                "files": {
+                    "--file": 1
+                },
+                "output": {
+                    "--output": 1
+                }
+            },
+            "safety_version": "3.6.0",
+            "safety_source": "cli",
+            "os_type": "Darwin",
+            "os_release": "25.0.0",
+            "os_description": "macOS-26.0-arm64-arm-64bit-Mach-O",
+            "python_version": "3.13.3",
+            "safety_command": "check"
+        },
+        "git": {
+            "branch": "main",
+            "tag": "",
+            "commit": "f5728b074d7d21f9574dd2dbd2d9d55ce3df5422",
+            "dirty": "True",
+            "origin": "https://github.com/GeorgeMyller/Continuador.git"
+        },
+        "project": null,
+        "json_version": "1.1",
+        "remediations_attempted": 0,
+        "remediations_completed": 0,
+        "remediation_mode": "NON_INTERACTIVE"
+    },
+    "scanned_packages": {
+        "pyautogui": {
+            "name": "pyautogui",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "pyautogui>=0.9.54",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyautogui",
+                    "specifier": ">=0.9.54",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "pynput": {
+            "name": "pynput",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "pynput>=1.7.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pynput",
+                    "specifier": ">=1.7.6",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "keyboard": {
+            "name": "keyboard",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "keyboard>=0.13.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "keyboard",
+                    "specifier": ">=0.13.5",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "pillow": {
+            "name": "pillow",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "Pillow>=10.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "Pillow",
+                    "specifier": ">=10.4.0",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "numpy": {
+            "name": "numpy",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "numpy>=1.24.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "numpy",
+                    "specifier": ">=1.24.3",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "opencv-python": {
+            "name": "opencv-python",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "opencv-python>=4.8.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "opencv-python",
+                    "specifier": ">=4.8.0",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        },
+        "pytesseract": {
+            "name": "pytesseract",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "pytesseract>=0.3.10",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pytesseract",
+                    "specifier": ">=0.3.10",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ]
+        }
+    },
+    "affected_packages": {
+        "opencv-python": {
+            "name": "opencv-python",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "opencv-python>=4.8.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "opencv-python",
+                    "specifier": ">=4.8.0",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ],
+            "found": null,
+            "insecure_versions": [
+                "3.4.0.12",
+                "3.4.0.14",
+                "3.4.10.35",
+                "3.4.10.37",
+                "3.4.11.39",
+                "3.4.11.41",
+                "3.4.11.43",
+                "3.4.11.45",
+                "3.4.1.15",
+                "3.4.13.47",
+                "3.4.14.51",
+                "3.4.14.53",
+                "3.4.15.55",
+                "3.4.16.57",
+                "3.4.16.59",
+                "3.4.17.61",
+                "3.4.17.63",
+                "3.4.18.65",
+                "3.4.2.16",
+                "3.4.2.17",
+                "3.4.3.18",
+                "3.4.4.19",
+                "3.4.5.20",
+                "3.4.6.27",
+                "3.4.7.28",
+                "3.4.8.29",
+                "3.4.9.31",
+                "3.4.9.33",
+                "4.0.0.21",
+                "4.0.1.23",
+                "4.0.1.24",
+                "4.1.0.25",
+                "4.1.1.26",
+                "4.1.2.30",
+                "4.2.0.32",
+                "4.2.0.34",
+                "4.3.0.36",
+                "4.3.0.38",
+                "4.4.0.40",
+                "4.4.0.42",
+                "4.4.0.44",
+                "4.4.0.46",
+                "4.5.1.48",
+                "4.5.2.52",
+                "4.5.2.54",
+                "4.5.3.56",
+                "4.5.4.58",
+                "4.5.4.60",
+                "4.5.5.62",
+                "4.5.5.64",
+                "4.6.0.66",
+                "4.7.0.68",
+                "4.7.0.72",
+                "4.8.0.74",
+                "4.8.0.76"
+            ],
+            "secure_versions": [
+                "4.12.0.88",
+                "4.11.0.86",
+                "4.10.0.84",
+                "4.10.0.82",
+                "4.9.0.80",
+                "4.8.1.78"
+            ],
+            "latest_version_without_known_vulnerabilities": "4.12.0.88",
+            "latest_version": "4.12.0.88",
+            "more_info_url": "https://data.safetycli.com/p/pypi/opencv-python/97c/"
+        },
+        "pillow": {
+            "name": "pillow",
+            "version": null,
+            "requirements": [
+                {
+                    "raw": "Pillow>=10.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "Pillow",
+                    "specifier": ">=10.4.0",
+                    "url": null,
+                    "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+                }
+            ],
+            "found": null,
+            "insecure_versions": [
+                "1.0",
+                "10.0.0",
+                "10.0.1",
+                "10.1.0",
+                "10.2.0",
+                "1.1",
+                "11.2.1",
+                "1.2",
+                "1.3",
+                "1.4",
+                "1.5",
+                "1.6",
+                "1.7.0",
+                "1.7.1",
+                "1.7.2",
+                "1.7.3",
+                "1.7.4",
+                "1.7.5",
+                "1.7.6",
+                "1.7.7",
+                "1.7.8",
+                "2.0.0",
+                "2.1.0",
+                "2.2.0",
+                "2.2.1",
+                "2.2.2",
+                "2.3.0",
+                "2.3.1",
+                "2.3.2",
+                "2.4.0",
+                "2.5.0",
+                "2.5.1",
+                "2.5.2",
+                "2.5.3",
+                "2.6.0",
+                "2.6.1",
+                "2.6.2",
+                "2.7.0",
+                "2.8.0",
+                "2.8.1",
+                "2.8.2",
+                "2.9.0",
+                "3.0.0",
+                "3.1.0",
+                "3.1.0rc1",
+                "3.1.1",
+                "3.1.2",
+                "3.2.0",
+                "3.3.0",
+                "3.3.1",
+                "3.3.2",
+                "3.3.3",
+                "3.4.0",
+                "3.4.1",
+                "3.4.2",
+                "4.0.0",
+                "4.1.0",
+                "4.1.1",
+                "4.2.0",
+                "4.2.1",
+                "4.3.0",
+                "5.0.0",
+                "5.1.0",
+                "5.2.0",
+                "5.3.0",
+                "5.4.0",
+                "5.4.0.dev0",
+                "5.4.1",
+                "6.0.0",
+                "6.1.0",
+                "6.2.0",
+                "6.2.1",
+                "6.2.2",
+                "7.0.0",
+                "7.1.0",
+                "7.1.1",
+                "7.1.2",
+                "7.2.0",
+                "8.0.0",
+                "8.0.1",
+                "8.1.0",
+                "8.1.1",
+                "8.1.2",
+                "8.2.0",
+                "8.3.0",
+                "8.3.1",
+                "8.3.2",
+                "8.4.0",
+                "9.0.0",
+                "9.0.1",
+                "9.1.0",
+                "9.1.1",
+                "9.2.0",
+                "9.3.0",
+                "9.4.0",
+                "9.5.0"
+            ],
+            "secure_versions": [
+                "11.3.0",
+                "11.1.0",
+                "11.0.0",
+                "10.4.0",
+                "10.3.0"
+            ],
+            "latest_version_without_known_vulnerabilities": "11.3.0",
+            "latest_version": "11.3.0",
+            "more_info_url": "https://data.safetycli.com/p/pypi/pillow/97c/"
+        }
+    },
+    "announcements": [
+        {
+            "type": "warning",
+            "message": "Warning: pyautogui, pynput, keyboard, pillow, numpy, opencv-python and pytesseract are unpinned. Safety by default does not report on potential vulnerabilities in unpinned packages. It is recommended to pin your dependencies unless this is a library meant for distribution. To learn more about reporting these, specifier range handling, and options for scanning unpinned packages visit https://docs.pyup.io/docs/safety-range-specs"
+        }
+    ],
+    "vulnerabilities": [],
+    "ignored_vulnerabilities": [
+        {
+            "vulnerability_id": "62308",
+            "package_name": "opencv-python",
+            "ignored": true,
+            "ignored_reason": "This vulnerability is being ignored due to the 'ignore-unpinned-requirements' flag (default True). To change this, set 'ignore-unpinned-requirements' to False under 'security' in your policy file. See https://docs.pyup.io/docs/safety-20-policy-file for more information.",
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                ">=3.4.9.31,<4.8.1.78"
+            ],
+            "all_vulnerable_specs": [
+                ">=3.4.9.31,<4.8.1.78"
+            ],
+            "analyzed_version": null,
+            "analyzed_requirement": {
+                "raw": "opencv-python>=4.8.0",
+                "extras": [],
+                "marker": null,
+                "name": "opencv-python",
+                "specifier": ">=4.8.0",
+                "url": null,
+                "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+            },
+            "advisory": "Opencv-python 4.8.1.78 updates its bundled dependency 'libwebp' to include a fix for a high risk vulnerability. Only mac OS X wheels on PyPI were affected.\r\nhttps://github.com/opencv/opencv-python/releases/tag/78",
+            "is_transitive": true,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2023-4863",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/62308/97c"
+        },
+        {
+            "vulnerability_id": "77942",
+            "package_name": "pillow",
+            "ignored": true,
+            "ignored_reason": "This vulnerability is being ignored due to the 'ignore-unpinned-requirements' flag (default True). To change this, set 'ignore-unpinned-requirements' to False under 'security' in your policy file. See https://docs.pyup.io/docs/safety-20-policy-file for more information.",
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                ">=11.2.0,<11.3.0"
+            ],
+            "all_vulnerable_specs": [
+                ">=11.2.0,<11.3.0"
+            ],
+            "analyzed_version": null,
+            "analyzed_requirement": {
+                "raw": "Pillow>=10.4.0",
+                "extras": [],
+                "marker": null,
+                "name": "Pillow",
+                "specifier": ">=10.4.0",
+                "url": null,
+                "found": "/Volumes/SSD-EXTERNO/2025/Continuador/requirements.txt"
+            },
+            "advisory": "Affected versions of this package are vulnerable to a Buffer Overflow when saving sufficiently large compressed DDS images (>64KB with default settings). The DDS encoding functionality fails to perform bounds checking when writing to the destination buffer, leading to a heap buffer overflow condition. This vulnerability was introduced in Pillow 11.2.0 when BCn compression support for DDS format was added.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-48379",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/77942/97c"
+        }
+    ],
+    "remediations": {},
+    "remediations_results": {
+        "vulnerabilities_fixed": [],
+        "remediations_applied": {},
+        "remediations_skipped": {}
+    }
+}
+
+
++===========================================================================================================================================================================================+
+
+
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++===========================================================================================================================================================================================+
+
+

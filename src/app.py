@@ -21,7 +21,7 @@ except ImportError:
     tk = mock.MagicMock()
 
 try:
-    from .config import MESSAGES, UI_CONFIG
+    from .config import MESSAGES
     from .monitor import MonitoringManager
     from .ui import ModernUI
 except ImportError:
