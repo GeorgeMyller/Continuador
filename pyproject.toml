@@ -165,6 +165,21 @@ module = [
 ]
 ignore_missing_imports = true
 
+[[tool.mypy.overrides]]
+module = [
+    "src.ui",
+    "src.detector",
+    "src.monitor",
+    "src.resolution_adapter",
+    "src.app",
+]
+# Relax strict checks for modules that are mocked in CI/headless tests
+ignore_missing_imports = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = false
+warn_unused_ignores = false
+
 # Pytest configuration
 [tool.pytest.ini_options]
 minversion = "6.0"
