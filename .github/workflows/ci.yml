@@ -105,7 +105,7 @@ jobs:
         safety check --json --output safety-report.json || true
 
     - name: Upload security reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: security-reports
@@ -141,10 +141,30 @@ jobs:
         twine check dist/*
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: dist
         path: dist/
+
+  artifact-verify:
+    name: Verify Artifacts (temporary)
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download build artifacts (verify)
+      uses: actions/download-artifact@v4
+      with:
+        name: dist
+        path: dist-verify/
+
+    - name: List downloaded artifact contents
+      run: |
+        echo "Contents of dist-verify:"
+        ls -la dist-verify || true
 
   release:
     name: Release to PyPI
@@ -155,7 +175,7 @@ jobs:
     
     steps:
     - name: Download build artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: dist
         path: dist/
