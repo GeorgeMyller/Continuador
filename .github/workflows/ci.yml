@@ -73,6 +73,8 @@ jobs:
   code-quality:
     name: Code Quality
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ''
     
     steps:
     - name: Checkout code
