@@ -6,7 +6,7 @@ Testes unitários para validar a refatoração
 import os
 import sys
 import unittest
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 
 # Adicionar src ao path para importações
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))

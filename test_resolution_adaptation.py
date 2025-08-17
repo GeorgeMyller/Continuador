@@ -30,7 +30,7 @@ def test_resolution_adaptation():
 
     # Configuração adaptada para resolução atual
     config = adapter.get_adapted_config()
-    print(f"\n✅ Configuração adaptada:")
+    print("\n✅ Configuração adaptada:")
     print(f"   - Largura mínima do botão: {config['min_width']}px")
     print(f"   - Largura máxima do botão: {config['max_width']}px")
     print(f"   - Altura mínima do botão: {config['min_height']}px")
@@ -47,7 +47,7 @@ def test_resolution_adaptation():
         (2880, 1800),  # MacBook Pro Retina
     ]
 
-    print(f"\n🧪 SIMULAÇÃO PARA DIFERENTES RESOLUÇÕES:")
+    print("\n🧪 SIMULAÇÃO PARA DIFERENTES RESOLUÇÕES:")
     print("-" * 60)
 
     base_resolution = RESOLUTION_ADAPTATION["base_resolution"]
@@ -68,7 +68,7 @@ def test_resolution_adaptation():
         print(f"   └─ Altura:  {min_height}-{max_height}px")
 
     # Testar limites de escala
-    print(f"\n⚠️  TESTE DE LIMITES:")
+    print("\n⚠️  TESTE DE LIMITES:")
     print("-" * 30)
 
     min_scale = RESOLUTION_ADAPTATION["min_scale_factor"]
@@ -87,7 +87,7 @@ def test_resolution_adaptation():
     if huge_scale_x > max_scale:
         print(f"⚠️  Resolução 8K seria limitada ao fator máximo ({max_scale}x)")
 
-    print(f"\n✅ RESULTADO:")
+    print("\n✅ RESULTADO:")
     print("🎯 O sistema adapta automaticamente os parâmetros de detecção")
     print("🔄 Mantém a precisão independente da resolução da tela")
     print("🛡️ Aplicação de limites de segurança previne valores extremos")
@@ -98,7 +98,7 @@ def test_resolution_adaptation():
 
 def test_cache_performance():
     """Testa a performance do sistema de cache"""
-    print(f"\n🚀 TESTE DE PERFORMANCE DO CACHE")
+    print("\n🚀 TESTE DE PERFORMANCE DO CACHE")
     print("=" * 40)
 
     import time
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         test_resolution_adaptation()
         test_cache_performance()
 
-        print(f"\n🎉 TODOS OS TESTES PASSARAM!")
+        print("\n🎉 TODOS OS TESTES PASSARAM!")
         print("✅ Sistema de adaptação de resolução funcionando perfeitamente")
 
     except Exception as e:

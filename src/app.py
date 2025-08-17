@@ -4,7 +4,6 @@ Sistema moderno de detecção e clique automático em botões azuis
 """
 
 import sys
-import time
 import tkinter as tk
 from typing import Dict, Any
 
@@ -13,7 +12,7 @@ try:
     from .ui import ModernUI
     from .monitor import MonitoringManager
 except ImportError:
-    from config import MESSAGES, UI_CONFIG
+    from config import MESSAGES
     from ui import ModernUI
     from monitor import MonitoringManager
 

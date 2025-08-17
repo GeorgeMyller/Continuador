@@ -13,7 +13,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 try:
-    from src.app import main as app_main, AutoClickerPro
+    from src.app import main as app_main
     from src import __version__, __description__
     
 except ImportError as e:

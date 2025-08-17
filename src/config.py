@@ -106,6 +106,7 @@ MONITORING_CONFIG = {
     # Configurações de segurança
     "failsafe_enabled": True,
     "pause_between_actions": 0.1,
+    "emergency_zone_size": 20,  # Tamanho da zona de emergência em pixels
 }
 
 # Configurações de Debug
@@ -156,7 +157,8 @@ MESSAGES = {
         "• Clica em botões que tenham formato típico de 'Continue'",
         "• Use o modo Debug para visualizar as detecções",
         "• Ajuste o intervalo conforme necessário",
-        "• Para parada de emergência: canto superior esquerdo",
+        "• Para parada de emergência: mova mouse para canto superior esquerdo (0-10px)",
+        "• Sistema verifica parada de emergência a cada ciclo de monitoramento",
     ],
 }
 
