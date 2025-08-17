@@ -3,9 +3,16 @@ Interface Gráfica Moderna do Auto Clicker Pro
 Módulo responsável pela criação e gerenciamento da interface do usuário
 """
 
-import tkinter as tk
-from tkinter import ttk
 from typing import Callable, Optional
+
+try:
+    from .test_helpers import safe_import
+except ImportError:
+    from test_helpers import safe_import
+
+# Safe imports that work in both normal and test environments
+tk = safe_import('tkinter')
+ttk = safe_import('tkinter.ttk')
 
 try:
     from .config import MESSAGES, UI_CONFIG
