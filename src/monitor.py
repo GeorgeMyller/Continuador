@@ -73,9 +73,7 @@ class MonitoringManager:
         self.click_callback = click_callback
         self.stats_callback = stats_callback
 
-    def start_monitoring(
-        self, interval: Optional[float] = None, debug_mode: bool = False
-    ) -> bool:
+    def start_monitoring(self, interval: Optional[float] = None, debug_mode: bool = False) -> bool:
         """
         Inicia o monitoramento
 
@@ -105,9 +103,7 @@ class MonitoringManager:
         self.session_start_time = time.time()
 
         # Atualizar status
-        self._update_status(
-            MESSAGES["status"]["monitoring"], "#F18F01"
-        )  # warning color
+        self._update_status(MESSAGES["status"]["monitoring"], "#F18F01")  # warning color
 
         # Iniciar thread de monitoramento
         self.monitor_thread = threading.Thread(
@@ -216,9 +212,7 @@ class MonitoringManager:
         x, y, w, h = button_info
 
         # Atualizar status
-        self._update_status(
-            MESSAGES["status"]["button_found"], "#A23B72"
-        )  # success color
+        self._update_status(MESSAGES["status"]["button_found"], "#A23B72")  # success color
 
         # Executar clique
         pyautogui.click(x, y)
@@ -231,9 +225,7 @@ class MonitoringManager:
         time.sleep(MONITORING_CONFIG["post_click_delay"])
 
         # Voltar para status de monitoramento
-        self._update_status(
-            MESSAGES["status"]["monitoring"], "#F18F01"
-        )  # warning color
+        self._update_status(MESSAGES["status"]["monitoring"], "#F18F01")  # warning color
 
     def _handle_emergency_stop(self) -> None:
         """Processa parada de emergência"""
@@ -260,9 +252,7 @@ class MonitoringManager:
 
         # Calcular estatísticas adicionais
         avg_detection_time = (
-            sum(self.detection_times) / len(self.detection_times)
-            if self.detection_times
-            else 0
+            sum(self.detection_times) / len(self.detection_times) if self.detection_times else 0
         )
 
         # Manter apenas os últimos 100 tempos para evitar uso excessivo de memória
@@ -348,9 +338,7 @@ class MonitoringManager:
         detector_stats = self.detector.get_statistics() if self.detector else {}
 
         avg_detection_time = (
-            sum(self.detection_times) / len(self.detection_times)
-            if self.detection_times
-            else 0
+            sum(self.detection_times) / len(self.detection_times) if self.detection_times else 0
         )
 
         return {

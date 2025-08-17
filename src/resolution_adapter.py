@@ -83,10 +83,7 @@ class ResolutionAdapter:
             return self._get_default_config()
 
         # Verificar cache
-        if (
-            RESOLUTION_ADAPTATION["cache_enabled"]
-            and self.current_resolution in self.config_cache
-        ):
+        if RESOLUTION_ADAPTATION["cache_enabled"] and self.current_resolution in self.config_cache:
             return self.config_cache[self.current_resolution]
 
         # Gerar nova configuração adaptada
@@ -104,18 +101,10 @@ class ResolutionAdapter:
 
         # Adaptar dimensões se habilitado
         if RESOLUTION_ADAPTATION["scale_factors"]["dimensions"]:
-            config["min_width"] = int(
-                BUTTON_DETECTION["base_min_width"] * self.scale_factor_x
-            )
-            config["max_width"] = int(
-                BUTTON_DETECTION["base_max_width"] * self.scale_factor_x
-            )
-            config["min_height"] = int(
-                BUTTON_DETECTION["base_min_height"] * self.scale_factor_y
-            )
-            config["max_height"] = int(
-                BUTTON_DETECTION["base_max_height"] * self.scale_factor_y
-            )
+            config["min_width"] = int(BUTTON_DETECTION["base_min_width"] * self.scale_factor_x)
+            config["max_width"] = int(BUTTON_DETECTION["base_max_width"] * self.scale_factor_x)
+            config["min_height"] = int(BUTTON_DETECTION["base_min_height"] * self.scale_factor_y)
+            config["max_height"] = int(BUTTON_DETECTION["base_max_height"] * self.scale_factor_y)
         else:
             config["min_width"] = BUTTON_DETECTION["base_min_width"]
             config["max_width"] = BUTTON_DETECTION["base_max_width"]
@@ -124,12 +113,8 @@ class ResolutionAdapter:
 
         # Adaptar área se habilitado
         if RESOLUTION_ADAPTATION["scale_factors"]["area"]:
-            config["min_area"] = int(
-                BUTTON_DETECTION["base_min_area"] * self.area_scale_factor
-            )
-            config["max_area"] = int(
-                BUTTON_DETECTION["base_max_area"] * self.area_scale_factor
-            )
+            config["min_area"] = int(BUTTON_DETECTION["base_min_area"] * self.area_scale_factor)
+            config["max_area"] = int(BUTTON_DETECTION["base_max_area"] * self.area_scale_factor)
         else:
             config["min_area"] = BUTTON_DETECTION["base_min_area"]
             config["max_area"] = BUTTON_DETECTION["base_max_area"]
@@ -259,9 +244,7 @@ class ResolutionAdapter:
         self._update_resolution()
 
         if old_resolution != self.current_resolution:
-            print(
-                f"🔄 Resolução atualizada: {old_resolution} → {self.current_resolution}"
-            )
+            print(f"🔄 Resolução atualizada: {old_resolution} → {self.current_resolution}")
             return True
         return False
 

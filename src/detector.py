@@ -76,9 +76,7 @@ class BlueButtonDetector:
             debug_img = img.copy() if self.debug_mode else None
 
             # Processar candidatos
-            valid_candidates = self._process_candidates(
-                candidates, img, debug_img, config
-            )
+            valid_candidates = self._process_candidates(candidates, img, debug_img, config)
 
             # Retornar melhor candidato
             if valid_candidates:
@@ -103,9 +101,7 @@ class BlueButtonDetector:
             print(f"Erro na detecção: {e}")
             return None
 
-    def _find_button_candidates(
-        self, img: np.ndarray, config: Dict[str, Any]
-    ) -> List[np.ndarray]:
+    def _find_button_candidates(self, img: np.ndarray, config: Dict[str, Any]) -> List[np.ndarray]:
         """
         Encontra contornos que podem ser botões azuis
 
@@ -136,9 +132,7 @@ class BlueButtonDetector:
         combined_mask = cv2.morphologyEx(combined_mask, cv2.MORPH_CLOSE, kernel)
 
         # Encontrar contornos
-        contours, _ = cv2.findContours(
-            combined_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
-        )
+        contours, _ = cv2.findContours(combined_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         return contours
 
@@ -184,9 +178,7 @@ class BlueButtonDetector:
                 continue
 
             # Calcular score do candidato
-            score = self._calculate_candidate_score(
-                x, y, w, h, blue_ratio, img.shape, config
-            )
+            score = self._calculate_candidate_score(x, y, w, h, blue_ratio, img.shape, config)
 
             # Criar candidato válido
             candidate = {
@@ -236,9 +228,7 @@ class BlueButtonDetector:
 
         # Verificar proporção (aspect ratio)
         aspect_ratio = w / h if h > 0 else 0
-        if not (
-            config["min_aspect_ratio"] <= aspect_ratio <= config["max_aspect_ratio"]
-        ):
+        if not (config["min_aspect_ratio"] <= aspect_ratio <= config["max_aspect_ratio"]):
             return False
 
         # Verificar posição (não muito próximo das bordas)
@@ -251,9 +241,7 @@ class BlueButtonDetector:
 
         return True
 
-    def _calculate_blue_ratio(
-        self, img: np.ndarray, x: int, y: int, w: int, h: int
-    ) -> float:
+    def _calculate_blue_ratio(self, img: np.ndarray, x: int, y: int, w: int, h: int) -> float:
         """
         Calcula a proporção de pixels azuis na região do botão
 
@@ -348,9 +336,7 @@ class BlueButtonDetector:
 
         # Adicionar texto com score
         text = f"Score: {score:.2f}"
-        cv2.putText(
-            debug_img, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
-        )
+        cv2.putText(debug_img, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
     def _save_debug_image(
         self,
