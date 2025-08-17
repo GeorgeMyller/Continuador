@@ -295,3 +295,4 @@ Continuador/
 ├── README.md                   # Esta documentação
 ├── MANUAL.md                   # Manual detalhado de uso
 └── setup.sh                   # Script de configuração
+# Test trigger for GitHub Actions
