@@ -7,12 +7,12 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![CI/CD](https://github.com/yourusername/auto-clicker-pro/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/yourusername/auto-clicker-pro/actions)
-[![Coverage](https://codecov.io/gh/yourusername/auto-clicker-pro/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/auto-clicker-pro)
+[![CI/CD](https://github.com/GeorgeMyller/Continuador/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/GeorgeMyller/Continuador/actions)
+[![Coverage](https://codecov.io/gh/GeorgeMyller/Continuador/branch/main/graph/badge.svg)](https://codecov.io/gh/GeorgeMyller/Continuador)
 
 *Um sistema avançado de automação que detecta e clica automaticamente em botões azuis na tela, com interface moderna e arquitetura modular.*
 
-[🚀 Começar](#-instalação-rápida) • [📖 Documentação](docs/) • [🐛 Reportar Bug](https://github.com/yourusername/auto-clicker-pro/issues) • [💡 Solicitar Feature](https://github.com/yourusername/auto-clicker-pro/issues)
+[🚀 Começar](#-instalação-rápida) • [📖 Documentação](docs/) • [🐛 Reportar Bug](https://github.com/GeorgeMyller/Continuador/issues) • [💡 Solicitar Feature](https://github.com/GeorgeMyller/Continuador/issues)
 
 </div>
 
@@ -42,14 +42,14 @@ Sistema completo de métricas com taxa de sucesso, tempo de sessão e análise d
 </td>
 <td>
 
-### �️ **Segurança Integrada**
+### 🛡️ **Segurança Integrada**
 Parada de emergência automática, failsafe integrado e controles de segurança robustos.
 
 </td>
 </tr>
 </table>
 
-### � **Recursos Técnicos**
+### 🔧 **Recursos Técnicos**
 - ⚡ **Performance Otimizada**: Algoritmos de detecção otimizados para baixo uso de CPU
 - 🔧 **Configurações Flexíveis**: Sistema de configuração centralizado e persistente
 - 📈 **Sistema de Logging**: Logs estruturados para debugging e análise
@@ -61,6 +61,23 @@ Parada de emergência automática, failsafe integrado e controles de segurança 
 
 O projeto foi refatorado com uma arquitetura modular para facilitar manutenção:
 
+```text
+Continuador/
+├── src/                          # Código fonte modular
+│   ├── __init__.py              # Informações do pacote
+│   ├── app.py                   # Aplicação principal
+│   ├── config.py                # Configurações centralizadas
+│   ├── detector.py              # Sistema de detecção de botões
+│   ├── monitor.py               # Gerenciador de monitoramento
+│   ├── ui.py                    # Interface gráfica moderna
+│   └── utils.py                 # Utilitários e ferramentas
+├── auto_clicker_blue.py         # Versão original (legacy)
+├── main.py                      # Ponto de entrada principal
+├── requirements.txt             # Dependências Python
+├── pyproject.toml               # Configuração do projeto
+├── README.md                    # Documentação principal
+├── MANUAL.md                    # Manual detalhado de uso
+└── setup.sh                     # Script de configuração
 ```
 
 ## 🚀 Instalação e Uso
@@ -226,8 +243,8 @@ Contribuições são bem-vindas! Veja nosso [Guia de Contribuição](CONTRIBUTIN
 
 Agradecemos a todos que contribuem para este projeto:
 
-<a href="https://github.com/yourusername/auto-clicker-pro/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=yourusername/auto-clicker-pro" />
+<a href="https://github.com/GeorgeMyller/Continuador/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GeorgeMyller/Continuador" />
 </a>
 
 ### 🔄 Como Contribuir
@@ -265,9 +282,9 @@ Este software deve ser usado apenas em aplicações próprias ou com permissão 
 ## 📞 Suporte
 
 - 📧 **Email**: [support@auto-clicker-pro.com](mailto:support@auto-clicker-pro.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/auto-clicker-pro/issues)
-- 💬 **Discussões**: [GitHub Discussions](https://github.com/yourusername/auto-clicker-pro/discussions)
-- 📖 **Documentação**: [Wiki](https://github.com/yourusername/auto-clicker-pro/wiki)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/GeorgeMyller/Continuador/issues)
+- 💬 **Discussões**: [GitHub Discussions](https://github.com/GeorgeMyller/Continuador/discussions)
+- 📖 **Documentação**: [Wiki](https://github.com/GeorgeMyller/Continuador/wiki)
 
 ---
 
@@ -278,21 +295,4 @@ Este software deve ser usado apenas em aplicações próprias ou com permissão 
 *Desenvolvido com ❤️ para automatizar tarefas repetitivas de forma inteligente e segura.*
 
 </div>
-Continuador/
-├── src/                          # Código fonte modular
-│   ├── __init__.py              # Informações do pacote
-│   ├── app.py                   # Aplicação principal
-│   ├── config.py                # Configurações centralizadas
-│   ├── detector.py              # Sistema de detecção de botões
-│   ├── monitor.py               # Gerenciador de monitoramento
-│   ├── ui.py                    # Interface gráfica moderna
-│   └── utils.py                 # Utilitários e ferramentas
-├── auto_clicker_blue.py         # Versão original (legacy)
-├── main.py                      # Ponto de entrada principal
-├── main.py                      # Ponto de entrada alternativo
-├── requirements.txt             # Dependências Python
-├── pyproject.toml              # Configuração do projeto
-├── README.md                   # Esta documentação
-├── MANUAL.md                   # Manual detalhado de uso
-└── setup.sh                   # Script de configuração
-# Test trigger for GitHub Actions
+
